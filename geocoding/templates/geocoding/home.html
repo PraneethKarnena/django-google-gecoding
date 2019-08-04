@@ -38,7 +38,7 @@
 
                 <p><em>Note: <strong>NO</strong> address will be saved in the database</em></p>
                 <h3 class="mt-5">Upload a CSV file to proceed...</h3>
-                <form class="form-inline mt-3" method="POST">
+                <form class="form-inline mt-3" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="csvFile" class="sr-only">Upload CSV File</label>
