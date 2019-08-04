@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Django - Google Maps Geocoding Demonstration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
 </head>
+
 <body>
     <div class="container">
         <div class="row mt-3">
             <div class="col-lg-3"></div>
             <div class="col-lg-6 text-center">
                 <h2>Django - Google Maps Geocoding</h2>
+
+                <h4 class="mt-4">How this works:</h4>
+
+                <ul>
+                    <li>You upload an excel file (<code>.csv</code>) which contains an <code>address</code> column</li>
+
+                    <li>It is assumed that the excel file contains multiple rows of addresses</li>
+
+                    <li>Address in each row is extracted and a Geocoding lookup is made through Google Maps Geocoding
+                        API</li>
+
+                    <li>The <code>latitude</code> and <code>longtitude</code> is pulled from the API response</li>
+
+                    <li>The <code>lat</code> and <code>long</code> from above is written against the same row in the
+                        address</li>
+
+                    <li>The new excel file along with <code>address</code>, <code>lat</code> and <code>long</code> is
+                        availabe for download</li>
+                </ul>
+
+                <p><em>Note: <strong>NO</strong> address will be saved in the database</em></p>
+                <h3 class="mt-5">Upload a CSV file to proceed...</h3>
+                <form class="form-inline mt-3">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="csvFile" class="sr-only">Upload CSV File</label>
+                        <input type="file" name="csv_file" class="form-control-file" id="csvFile" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </form>
             </div>
         </div>
     </div>
 </body>
+
 </html>
