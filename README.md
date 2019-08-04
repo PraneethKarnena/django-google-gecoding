@@ -1,6 +1,6 @@
 ## Django - Google Maps Geocoding Demonstration
 
-Demo: [https://django-google-gecoding.herokuapp.com/](https://django-google-gecoding.herokuapp.com/)
+Demo: [https://django-google-geocoding.herokuapp.com/](https://django-google-geocoding.herokuapp.com/)
 
 How this works:
 
