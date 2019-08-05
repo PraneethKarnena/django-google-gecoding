@@ -12,3 +12,5 @@ How this works:
  - The new excel file along with `address`, `lat` and `long` is availabe for download
 
 *Note: **NO** address will be saved in the database*
+
+*To prevent misuse, only the first 10 rows/addresses will be extracted*
