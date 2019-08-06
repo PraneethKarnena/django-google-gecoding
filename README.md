@@ -13,4 +13,4 @@ How this works:
 
 *Note: **NO** address will be saved in the database*
 
-*To prevent misuse, only the first 10 rows/addresses will be extracted*
+*To prevent misuse, only the first 6 rows/addresses will be extracted*
